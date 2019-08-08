@@ -271,6 +271,24 @@ namespace sharpAHK
             return exists;
         }
 
+                        /// <summary>
+        /// Determines whether state is "Ready" or not
+        /// </summary>
+        /// <param>No parameters</param>
+        /// <returns>Returns true if the state is "Ready", otherwise false</returns>
+        public bool IsReady()
+        {
+            //create an autohotkey engine (AHK DLL) or use existing instance if it hasn't been initiated
+            if (ahkGlobal.ahkdll == null) { New_AHKSession(); }
+            var ahkdll = ahkGlobal.ahkdll;
+
+            bool ready = ahkdll.IsReady();
+
+            Log("bool ready (" + ready + ") = ahk.IsReady();");
+
+            return ready;
+        }
+
         /// <summary>Execute Label/GoSub Command Loaded in Current AHK Session</summary>
         /// <param name="GoSubName">AHK Script Label to Execute</param>
         /// <param name="CheckIfExistsFirst">Option to Confirm Label Exists in Memory Before Attempting To Execute</param>

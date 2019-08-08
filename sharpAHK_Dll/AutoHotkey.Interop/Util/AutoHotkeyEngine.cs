@@ -193,5 +193,20 @@ namespace AutoHotkey.Interop
         public void InitalizePipesModule(Func<string, string> sendPipeMessageHandler) {
             Pipes.PipesModuleLoader.LoadPipesModule(sendPipeMessageHandler);
         }
+
+                        /// <summary>
+        /// Determines whether state is "Ready" or not
+        /// </summary>
+        /// <param>No parameters</param>
+        /// <returns>Returns true if the state is "Ready", otherwise false</returns>
+        public bool IsReady()
+        {
+                    if (AutoHotkeyDll.ahkReady() == true) {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
+        }
     }
 }
