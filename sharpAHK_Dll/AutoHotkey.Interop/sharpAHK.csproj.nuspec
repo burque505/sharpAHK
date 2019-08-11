@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>C:\_Code\radProjects\radDLLs\sharpAHK\sharpAHK_Dll\AutoHotkey.Interop\sharpAHK.csproj</id>
+    <id>C:\Automation\sharpAHK\sharpAHK_Dll\AutoHotkey.Interop\sharpAHK.csproj</id>
 	<authors>LucidMethod</authors>
-    <version>1.0.0.4</version>
-    <owners>LucidMethod</owners>
+    <version>1.0.0.5</version>
+    <owners>LucidMethod, burque505</owners>
     <licenseUrl></licenseUrl>
     <projectUrl></projectUrl>
     <iconUrl></iconUrl>
